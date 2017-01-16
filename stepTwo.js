@@ -16,7 +16,9 @@ function getAndPrintHTML() {
   https.get(requestOptions, function(response) {
 
     response.setEncoding('utf8');
+
     var results = "";
+
     response.on('data', function (data) {
       results += data;
     });
